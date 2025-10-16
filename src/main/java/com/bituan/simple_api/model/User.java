@@ -36,4 +36,15 @@ public class User {
     public void setStack(String stack) {
         this.stack = stack;
     }
+
+    @Override
+    public String toString () {
+        return """
+                {
+                "email": "%s",
+                "name": "%s",
+                "stack": "%s"
+                }
+                """.formatted(email, name, stack);
+    }
 }
