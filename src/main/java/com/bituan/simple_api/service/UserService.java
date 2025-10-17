@@ -8,8 +8,4 @@ public class UserService {
     public User getUser() {
         return new User ("awanebitobi6@gmail.com", "Tobi Awanebi", "Java/SpringBoot");
     }
-
-    public String getUserAsJSONString () {
-        return new User("awanebitobi6@gmail.com", "Tobi Awanebi", "Java/SpringBoot").toString();
-    }
 }
