@@ -1,14 +1,14 @@
 package com.bituan.simple_api.model;
 
-import java.util.Date;
+import java.time.LocalTime;
 
 public class ResponseModel {
     private String status;
     private User user;
-    private Date timestamp;
+    private LocalTime timestamp;
     private String fact;
 
-    public ResponseModel(String status, User user, Date timestamp, String fact) {
+    public ResponseModel(String status, User user, LocalTime timestamp, String fact) {
         this.status = status;
         this.user = user;
         this.timestamp = timestamp;
@@ -31,11 +31,11 @@ public class ResponseModel {
         this.user = user;
     }
 
-    public Date getTimestamp() {
+    public LocalTime getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(LocalTime timestamp) {
         this.timestamp = timestamp;
     }
 
