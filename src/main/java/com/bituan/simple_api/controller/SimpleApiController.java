@@ -1,11 +1,14 @@
 package com.bituan.simple_api.controller;
 
+import com.bituan.simple_api.model.ResponseModel;
 import com.bituan.simple_api.service.CatFactService;
 import com.bituan.simple_api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.Instant;
 
 @RestController
 public class SimpleApiController {
@@ -20,10 +23,11 @@ public class SimpleApiController {
     }
 
     @GetMapping("/me")
-    public ResponseEntity<String> getResponse () {
+    public ResponseEntity<ResponseModel> getResponse () {
+        ResponseModel response = new ResponseModel("success", userService.getUser(), Instant.now(), catFactService.getCatFact());
         return ResponseEntity
                 .ok()
                 .header("Content-Type", "application/json")
-                .body("%s\n%s".formatted(userService.getUserAsJSONString(), catFactService.getCatFact()));
+                .body(response);
     }
 }
