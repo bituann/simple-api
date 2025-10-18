@@ -12,8 +12,8 @@ If you're running this project from an Intellij, there is no need to install Mav
 
 ## Instructions for Running Locally
 * Clone this repository using `git clone`
-* Open cmd (Windows) or Terminal (MacOS and Linux)
-* Open the project foler using `cd <path-to-project>`
+* Open cmd (Windows) or Terminal (macOS and Linux)
+* Open the project folder using `cd <path-to-project>`
 * Run `mvn spring-boot:run`
 
 
